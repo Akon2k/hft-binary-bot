@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HFT Dashboard | Ultra Minimalist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="glass-panel main-header">
+            <div class="logo">
+                <span class="pulse-icon"></span>
+                <h1>APEX TRADING <small>HFT</small></h1>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">SALDO</span>
+                    <span class="value" id="balance">$0.00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">PROFIT HOY</span>
+                    <span class="value positive" id="profit">+$0.00</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="grid-layout">
+            <section class="glass-panel chart-section">
+                <div class="section-header">
+                    <h2>MERCADO EN VIVO</h2>
+                    <div id="active-symbol" class="badge">R_100</div>
+                </div>
+                <div id="chart-container"></div>
+            </section>
+
+            <aside class="glass-panel history-section">
+                <div class="section-header">
+                    <h2>HISTORIAL</h2>
+                </div>
+                <div id="history-list" class="scrollable">
+                    <!-- Trades go here -->
+                </div>
+            </aside>
+        </main>
+
+        <footer class="glass-panel status-bar">
+            <div id="connection-status">
+                <span class="status-dot online"></span>
+                SISTEMA OPERATIVO
+            </div>
+            <div id="last-update">Última señal: Ninguna</div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
